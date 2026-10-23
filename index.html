@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Prelanzamiento: no se indexa hasta tener el número de registro -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>[Nombre] · Intermediación hipotecaria</title>
+  <meta name="description" content="Intermediación hipotecaria para casos que se salen del patrón del banco. Precio publicado y solo pagas si firmas.">
+  <meta name="theme-color" content="#EEF0F0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='7' y='4' width='18' height='24' rx='4' fill='%23222B3D'/%3E%3Cpath d='M11 12h10M11 17h10M11 22h6' stroke='%23fff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Inter+Tight:wght@500..700&display=swap">
+  <link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="sr" href="#vista">Saltar al contenido</a>
+
+  <!-- Navegación: cápsula de cristal con control segmentado (ordenador) -->
+  <header class="nav" id="nav">
+    <a class="logo" href="#/" aria-label="Inicio">
+      <svg class="iso" viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="3" width="18" height="24" rx="4" fill="#C9CED6"/><rect x="9" y="6" width="18" height="24" rx="4" fill="#222B3D"/><path d="M13 14h10M13 19h10M13 24h6" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+      <span><span data-marca="nombre">[Nombre]</span><small>Intermediación hipotecaria</small></span>
+    </a>
+    <nav class="segmentado" id="secciones" aria-label="Secciones"></nav>
+    <div class="nav-der">
+      <a class="btn chico texto btn-area" href="#/area">Área cliente</a>
+      <a class="btn chico primario" href="#/estudio">Estudio gratis</a>
+    </div>
+  </header>
+
+  <main id="vista" class="vista" tabindex="-1"></main>
+
+  <footer class="pie envoltura" id="pie"></footer>
+
+  <!-- Barra inferior (móvil) -->
+  <nav class="barra" id="barra" aria-label="Secciones"></nav>
+
+  <!-- Asistente -->
+  <button class="asis-boton" id="asis-boton" aria-label="Abrir el asistente" aria-haspopup="dialog" aria-controls="asis">
+    <span class="pulso" aria-hidden="true"></span><span class="asis-txt">¿Dudas? Pregunta</span>
+  </button>
+  <section class="asis" id="asis" role="dialog" aria-modal="false" aria-labelledby="asis-titulo" hidden>
+    <div class="asis-cab">
+      <svg class="iso" width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="3" width="18" height="24" rx="4" fill="#C9CED6"/><rect x="9" y="6" width="18" height="24" rx="4" fill="#222B3D"/><path d="M13 14h10M13 19h10M13 24h6" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+      <div><b id="asis-titulo">Asistente automático</b><small>Te pasa con una persona cuando hace falta</small></div>
+      <button class="btn" id="asis-cerrar" aria-label="Cerrar el asistente">✕</button>
+    </div>
+    <div class="asis-msgs" id="asis-msgs" aria-live="polite"></div>
+    <div class="asis-sugerencias" id="asis-sug"></div>
+    <form class="asis-form" id="asis-form">
+      <label class="sr" for="asis-texto">Escribe tu pregunta</label>
+      <input id="asis-texto" autocomplete="off" placeholder="Escribe tu pregunta…">
+      <button class="btn primario" aria-label="Enviar">↑</button>
+    </form>
+  </section>
+</body>
+</html>
